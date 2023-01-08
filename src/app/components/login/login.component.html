@@ -10,20 +10,22 @@
   <input type="checkbox" id="chk" aria-hidden="true">
 
   <div class="signup">
-    <form >
+    <form (ngSubmit)="onSignUp()" ) >
       <label for="chk" aria-hidden="true">Sign up</label>
-      <input type="text" name="txt" placeholder="Username" required="" >
-      <input type="email" name="email" placeholder="Email" required="" >
-      <input type="password" name="password" placeholder="Password" required="" >
+      <input type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="firstName" required="" >
+      <input type="text" name="lastName" [(ngModel)]="user.lastName" placeholder="lastName" required="" >
+      <input type="text" name="username" [(ngModel)]="user.username" placeholder="Username" required="" >
+      <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required="" >
+      <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" required="" >
       <button>Sign up</button>
     </form>
   </div>
 
   <div class="login">
-    <form (ngSubmit)="onSignIn()">
+    <form (ngSubmit)="onSignIn(user.username , user.password)">
       <label for="chk" aria-hidden="true">Login</label>
-      <input type="text" name="username" [(ngModel)]="username" id="username" placeholder="Username" required="">
-      <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="Password" required="">
+      <input type="text" name="username" [(ngModel)]="user.username" id="username" placeholder="Username" required="">
+      <input type="password" name="password" [(ngModel)]="user.password" id="password" placeholder="Password" required="">
       <button>Login</button>
     </form>
   </div>
