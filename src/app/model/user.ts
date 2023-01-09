@@ -1,5 +1,6 @@
 export class User {
-  id !:any;
+
+   id!: number;
   firstName !:String;
   lastName !:String;
   reference !:String;

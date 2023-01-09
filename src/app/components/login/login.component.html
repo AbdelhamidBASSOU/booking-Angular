@@ -10,7 +10,7 @@
   <input type="checkbox" id="chk" aria-hidden="true">
 
   <div class="signup">
-    <form (ngSubmit)="onSignUp()" ) >
+    <form (ngSubmit)="onSignUp(user.firstName,user.lastName,user.username,user.email,user.password)"  >
       <label for="chk" aria-hidden="true">Sign up</label>
       <input type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="firstName" required="" >
       <input type="text" name="lastName" [(ngModel)]="user.lastName" placeholder="lastName" required="" >
