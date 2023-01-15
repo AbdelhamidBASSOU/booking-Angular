@@ -1,0 +1,44 @@
+<div class="menu">
+  <div class="menu_container text-right">
+    <div class="menu_close">close</div>
+    <nav class="menu_nav">
+      <ul>
+        <li><a href="index-2.html">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="blog.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+<div class="super_container">
+
+  <header class="header">
+    <div class="header_overlay"></div>
+    <div class="header_content d-flex flex-row align-items-center justify-content-between">
+
+      <div class="logo"><a href="#">Hotel<span>Plus</span><span>+</span></a></div>
+
+      <div class="header_right d-flex w-100 flex-row align-items-center justify-content-between ml-auto">
+        <nav class="main_nav">
+          <ul class="d-flex flex-row align-items-center justify-content-start">
+            <li class="active"><a href="">Home</a></li>
+          </ul>
+        </nav>
+        <div class="log_reg">
+          <ul class="d-flex flex-row align-items-center justify-content-start">
+            <div class="book_button" *ngIf="isLoggedIn"><a (click)="logout()">Déconnexion</a></div>
+            <li *ngIf="isLoggedIn==false"><a [routerLink]="['login']">Login</a></li>
+            <li *ngIf="isLoggedIn==false"><a [routerLink]="['login']">Register</a></li>
+          </ul>
+        </div>
+        <div class="hamburger">
+          <i class="fa fa-bars trans_200"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
