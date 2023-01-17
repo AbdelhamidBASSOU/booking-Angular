@@ -50,6 +50,7 @@ export class RoomsComponent implements OnInit {
     this.hotelService.getHotelById(BigInt(this.idHotel)).subscribe(
       (response:Hotel)=>{
         this.rooms= response.roomList;
+        console.log(this.rooms)
       }
     )
   }

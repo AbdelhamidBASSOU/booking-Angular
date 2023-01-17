@@ -6,7 +6,7 @@ export class Reservation {
   totalPrice!:number;
   startDate!:Date;
   endDate!:Date;
-
+  status!:String;
   client!:User;
   room!:Room;
 

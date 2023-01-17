@@ -22,7 +22,9 @@ export class NavComponent implements OnInit {
     );
     this.userName = this.authService.userLogged.subscribe(
       (user) => {
-        this.user_name = user.toString();
+        if(user.length>0){
+          this.user_name = user.toString();
+        }
       }
     );
   }
