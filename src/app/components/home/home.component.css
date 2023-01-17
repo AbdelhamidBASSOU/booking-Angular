@@ -1,0 +1,237 @@
+/*********************************
+5. Home
+*********************************/
+
+.home
+{
+  height: 857px;
+  background: #360f64;
+  overflow: hidden;
+}
+.home_slider_container
+{
+  width: 100%;
+  height: 100%;
+}
+.home_slider_dots
+{
+  position: absolute;
+  top: 44%;
+  left: 53px;
+  z-index: 1;
+}
+.home_slider .owl-dots
+{
+  display: none;
+}
+.home_slider_custom_dot
+{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  line-height: 35px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.home_slider_custom_dot:hover,
+.home_slider_custom_dot.active
+{
+  color: #ffb400;
+}
+.home_slider_custom_dot:not(:last-child)
+{
+  margin-bottom: 15px;
+}
+.home_container
+{
+  position: absolute;
+  left: 0;
+  top: 36.2%;
+  width: 100%;
+}
+.home_content
+{
+
+}
+.home_title
+{
+  display: inline-block;
+}
+.home_title h1
+{
+  color: #FFFFFF;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.home_title h1 span
+{
+  position: relative;
+  line-height: 1.2;
+}
+.home_title h1 span::after
+{
+  display: block;
+  position: absolute;
+  top: 22px;
+  right: -8px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #ffb400;
+  line-height: 27px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  content: '+';
+}
+.search_form_container
+{
+  margin-top: 36px;
+}
+.search_form
+{
+  display: block;
+}
+.search_input
+{
+  display: block;
+  width: calc(100% - 214px);
+  height: 57px;
+  border: none;
+  outline: none;
+  padding-left: 27px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+.search_input::-webkit-input-placeholder
+{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #b9b9b9 !important;
+}
+.search_input:-moz-placeholder
+{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #b9b9b9 !important;
+}
+.search_input::-moz-placeholder
+{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #b9b9b9 !important;
+}
+.search_input:-ms-input-placeholder
+{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #b9b9b9 !important;
+}
+.search_input::input-placeholder
+{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #b9b9b9 !important;
+}
+.search_button
+{
+  width: 196px;
+  height: 57px;
+  border: none;
+  outline: none;
+  background: #ffb400;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+/*********************************
+7. Locations
+*********************************/
+
+.hotels
+{
+  background: #FFFFFF;
+  padding-top: 95px;
+  z-index: 1;
+}
+.hotels_container
+{
+  margin-top: 86px;
+}
+.hotel
+{
+  width: calc((100% - 100px) / 4);
+  height: 350px;
+  border: solid 2px transparent;
+  margin-bottom: 25px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.hotel:hover
+{
+  border-color: #ffb400;
+  box-shadow: 0px 35px 43px rgba(0,0,0,0.35);
+}
+.hotel_title
+{
+  position: absolute;
+  left: 20px;
+  bottom: 48px;
+  width: calc(100% - 38px);
+  height: 45px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.hotel_title > div
+{
+  width: 100%;
+  height: 100%;
+}
+.hotel_title > div a
+{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 45px;
+}
+.hotel_title > div a > div
+{
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -27px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ffb400;
+  line-height: 35px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+}

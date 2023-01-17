@@ -1,0 +1,37 @@
+<div class="booking" >
+  <div class="container">
+    <div class="alert mb-2 alert-success w-100 text-center fs-4 fw-semibold" *ngIf="successMessage.length>0">{{successMessage}}</div>
+    <div class="alert mb-2 alert-danger w-100 text-center fs-4 fw-semibold" *ngIf="errorMessage.length>0">{{errorMessage}}</div>
+    <div class="row">
+      <div class="col">
+        <div class="booking_title text-center"><h2>Mes Réservation</h2></div>
+        <div class="booking_slider_container shadow">
+          <table class="table table-bordered table-responsive table-striped table-hover">
+            <thead class="text-center align-middle">
+            <tr>
+              <th scope="col">Date de début</th>
+              <th scope="col">Date de fin</th>
+              <th scope="col">Chambre N°</th>
+              <th scope="col">Hôtel</th>
+              <th scope="col">Prix Total</th>
+              <th scope="col">Status</th>
+              <th scope="col" *ngIf="show">Annuler la réservation</th>
+              <th scope="col">Modifier</th>
+            </tr>
+            </thead>
+            <tbody *ngIf="reservations" class="text-center align-middle">
+            <tr *ngFor="let reservation of reservations;let i = index">
+              <th scope="row">{{reservation.totalPrice}}</th>
+              <td><input type="date" class="booking_input booking_input_a booking_in" [(ngModel)]="reservation.startDate" name="startDate" *ngIf="show[i]">{{!show[i] ? reservation.startDate:''}}</td>
+              <td><input type="date" class="booking_input booking_input_a booking_out" [(ngModel)]="reservation.endDate" name="endDate" *ngIf="show[i]">{{!show[i] ? reservation.endDate : ''}}</td>
+              <td>{{reservation.room.type}}</td>
+              <td>{{reservation.room.hotel.name}}</td>
+              <td>{{reservation.totalPrice}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
